@@ -1,6 +1,6 @@
 type Greeting {
   text: String!
-  error: Boolean
+  error: Boolean!
 }
 
 type Query {

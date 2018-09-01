@@ -1,5 +1,5 @@
 {
-  "name": "nuver-server",
+  "name": "nuber-server",
   "version": "1.0.0",
   "description": "Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJS.",
   "main": "index.js",
@@ -19,12 +19,17 @@
     "@types/helmet": "^0.0.39",
     "@types/morgan": "^1.7.35",
     "@types/node": "^10.9.2",
+    "babel-runtime": "^6.26.0",
+    "gql-merge": "^0.0.6",
+    "graphql-to-typescript": "^0.1.2",
     "nodemon": "^1.18.3",
     "ts-node": "^7.0.1",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.0.1"
   },
   "scripts": {
-    "dev": "cd src && nodemon --exec ts-node index.ts -e "
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
   }
 }
