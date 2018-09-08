@@ -7,6 +7,7 @@
   "author": "crea00 <654321su@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "class-validator": "^0.9.1",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
@@ -19,6 +20,7 @@
     "typeorm": "^0.2.7"
   },
   "devDependencies": {
+    "@types/bcrypt": "^2.0.0",
     "@types/cors": "^2.8.4",
     "@types/helmet": "^0.0.39",
     "@types/morgan": "^1.7.35",
