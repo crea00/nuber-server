@@ -64,6 +64,7 @@ class User extends BaseEntity {
   lastOrientation: number;
   
   @CreateDateColumn() createAt: string;
+
   @UpdateDateColumn() updateAt: string;
 
   get fullName(): string{
@@ -87,7 +88,6 @@ class User extends BaseEntity {
   private hashPassword(password: string): Promise<string> {
     return bcrypt.hash(password, BCRYPT_ROUNDS);
   }
-
 }
 
 export default User;

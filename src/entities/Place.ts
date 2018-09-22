@@ -1,25 +1,24 @@
-import { 
-  BaseEntity, 
-  Column, 
-  CreateDateColumn, 
-  Entity, 
+import {
+  BaseEntity,
+  Column,
+  CreateDateColumn,
+  Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn
 } from "typeorm";
 
-
 @Entity()
-class Verification extends BaseEntity {
+class Place extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
-  
-  @Column({ type: "text"})
+
+  @Column({ type: "text" })
   name: string;
 
   @Column({ type: "double precision", default: 0 })
-  lng: number;
+  lat: number;
 
   @Column({ type: "double precision", default: 0 })
-  lat: number;
+  lng: number;
 
   @Column({ type: "text" })
   address: string;
@@ -27,11 +26,8 @@ class Verification extends BaseEntity {
   @Column({ type: "boolean", default: false })
   isFav: boolean;
 
-
-
   @CreateDateColumn() createdAt: string;
+
   @UpdateDateColumn() updatedAt: string;
-
 }
-
-export default Verification;
+export default Place;
