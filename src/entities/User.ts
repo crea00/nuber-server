@@ -47,27 +47,30 @@ class User extends BaseEntity {
 
   @Column({ type: "text", default: false })
   verifiedPhoneNumber: boolean;
-
+  
   @Column({ type: "text" })
   profilePhoto: string;
-
+  
   @Column({ type:"boolean", default: false })
   isDriving: boolean;
-
+  
   @Column({ type:"boolean", default: false })
   isRiding: boolean;
-
+  
   @Column({ type:"boolean", default: false })
   isTaken: boolean;
   
   @Column({ type: "double precision", default: 0 })
   lastLng: number;
-
+  
   @Column({ type: "double precision", default: 0 })
   lastLat: number;
- 
+  
   @Column({ type: "double precision", default: 0 })
   lastOrientation: number;
+
+  @Column({ type: "text", nullable: true })
+  fbId: string;
 
   @ManyToOne(type => Chat, chat => chat.participants)
   chat: Chat;
