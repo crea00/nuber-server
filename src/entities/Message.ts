@@ -8,7 +8,7 @@ import {
   UpdateDateColumn
 } from "typeorm";
 
-import Chat from "./chat";
+import Chat from "./Chat";
 import User from "./User";
 
 @Entity()
